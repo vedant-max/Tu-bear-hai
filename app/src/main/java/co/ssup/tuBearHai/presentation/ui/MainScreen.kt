@@ -68,7 +68,6 @@ fun MainScreen(viewModel: MainViewModel) {
       verticalArrangement = Arrangement.Center
     ) {
       itemsIndexed(viewModel.beers.toList()) { index, beer ->
-        Log.d(TAG, "Vedant: ${beer.name}")
         BeerItem(
           beer = beer,
           color = RandomColors.colors[index.mod(12)],
@@ -108,7 +107,7 @@ fun BeerItem(modifier: Modifier, beer: Beer, color: Color, onClick: () -> Unit) 
   ) {
     AsyncImage(model = beer.image_url, contentDescription = null, modifier = Modifier.size(100.dp))
     Spacer(modifier = Modifier.size(16.dp))
-    Column {
+    Column(modifier = Modifier.weight(1f)) {
       Text(
         text = beer.name,
         style = MaterialTheme.typography.body1,
@@ -121,7 +120,6 @@ fun BeerItem(modifier: Modifier, beer: Beer, color: Color, onClick: () -> Unit) 
         color = MaterialTheme.colors.onSurface
       )
     }
-    Spacer(modifier = Modifier.weight(1f))
     IconButton(onClick = {
       onClick()
     }) {

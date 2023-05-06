@@ -12,6 +12,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import co.ssup.tuBearHai.data.repositories.MainRepository
 import co.ssup.tuBearHai.data.response.Beer
+import co.ssup.tuBearHai.util.addPageData
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
@@ -35,7 +36,7 @@ class MainViewModel @Inject constructor(private val repository: MainRepository) 
       isLoading = dataState.isLoading
       dataState.data?.let { beerResponse ->
         Log.d(TAG, "Vedant: ${beers.toList()}")
-        beers.addAll(beerResponse)
+        beers.addPageData(beerResponse)
         currentPage++
         isLoading = false
       }

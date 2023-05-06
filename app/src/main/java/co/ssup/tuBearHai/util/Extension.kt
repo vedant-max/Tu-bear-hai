@@ -43,3 +43,10 @@ fun LazyListState.OnEndReached(onLoadMore: () -> Unit) {
       }
   }
 }
+
+fun <T> MutableList<T>.addPageData(list: List<T>) {
+  this.addAll(list)
+  val distinctList = this.distinctBy { it.hashCode() }
+  this.clear()
+  this.addAll(distinctList)
+}
