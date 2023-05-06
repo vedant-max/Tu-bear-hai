@@ -1,0 +1,59 @@
+[versions]
+appcompact = "1.5.1"
+compose-activity = "1.7.1"
+compose-foundation = "1.4.2"
+compose-material = "1.4.2"
+compose-material3 = "1.0.1"
+compose-navigation = "2.5.3"
+compose-navigation-hilt = "1.0.0"
+compose-runtime = "1.4.2"
+compose-ui = "1.4.2"
+compose-ui-tooling = "1.4.2"
+compose-ui-tooling-preview = "1.4.2"
+compose-util = "1.4.2"
+core-ktx = "1.9.0"
+gson = "2.10"
+gradle = "8.0.1"
+hilt = "2.44.2"
+hilt-compiler = "1.0.0"
+hilt-lifecycle-viewmodel = "1.0.0"
+retrofit = "2.9.0"
+androidx-navigation = "2.5.3"
+okhttp = "4.10.0"
+kotlin = "1.7.20"
+lifecycle-viewmodel-ktx = "2.5.1"
+moshi = "1.14.0"
+
+[libraries]
+appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompact" }
+compose-activity = { module = "androidx.activity:activity-compose", version.ref = "compose-activity" }
+compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose-foundation" }
+compose-material = { module = "androidx.compose.material:material", version.ref = "compose-material" }
+compose-material3 = { module = "androidx.compose.material3:material3", version.ref = "compose-material3" }
+compose-navigation = { module = "androidx.navigation:navigation-compose", version.ref = "compose-navigation" }
+compose-navigation-hilt = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "compose-navigation-hilt" }
+compose-runtime = { module = "androidx.compose.runtime:runtime", version.ref = "compose-runtime" }
+compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose-ui" }
+compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose-ui-tooling" }
+compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose-ui-tooling-preview" }
+compose-util = { module = "androidx.compose.ui:ui-util", version.ref = "compose-util" }
+core-ktx = { module = "androidx.core:core-ktx", version.ref = "core-ktx" }
+gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
+hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hilt" }
+hilt-lifecycle-viewmodel = { module = "androidx.hilt:hilt-lifecycle-viewmodel", version.ref = "hilt-lifecycle-viewmodel" }
+lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycle-viewmodel-ktx" }
+moshi = { module = "com.squareup.moshi:moshi-kotlin", version.ref = "moshi" }
+moshi-annotation-processor = { module = "com.squareup.moshi:moshi-kotlin-codegen", version.ref = "moshi" }
+moshi-retrofit-converter = { module = "com.squareup.retrofit2:converter-moshi", version.ref = "retrofit" }
+okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
+okhttp-logger = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "okhttp" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+
+[bundles]
+
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "gradle" }
+androidLibrary = { id = "com.android.library", version.ref = "gradle" }
+kotlin = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
