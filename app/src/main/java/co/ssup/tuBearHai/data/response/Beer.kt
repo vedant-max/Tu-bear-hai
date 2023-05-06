@@ -1,9 +1,5 @@
 package co.ssup.tuBearHai.data.response
 
-data class BeerResponse(
-  val response: List<Beer>
-)
-
 data class Beer(
   val id: Int,
   val name: String,

@@ -24,12 +24,15 @@ android {
 
   buildTypes {
     debug {
-      buildConfigField("String", "BASE_URL", properties[api_base_url].toString())
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+      buildConfigField("String", "BASE_URL", "\"https://api.punkapi.com/v2/\"")
     }
     release {
       minifyEnabled false
       proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-      buildConfigField("String", "BASE_URL", properties[api_base_url].toString())
+      buildConfigField("String", "BASE_URL", "\"https://api.punkapi.com/v2/\"")
+      signingConfig signingConfigs.debug
     }
   }
   compileOptions {

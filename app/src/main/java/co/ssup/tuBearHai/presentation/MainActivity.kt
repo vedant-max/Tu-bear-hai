@@ -10,7 +10,12 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.navigation.compose.rememberNavController
+import co.ssup.tuBearHai.presentation.ui.MainScreen
 import co.ssup.tuBearHai.presentation.ui.theme.TuBearHaiTheme
+import co.ssup.tuBearHai.util.NavGraph
+import co.ssup.tuBearHai.util.Screens
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -20,9 +25,7 @@ class MainActivity : ComponentActivity() {
     setContent {
       TuBearHaiTheme {
         // A surface container using the 'background' color from the theme
-        Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
-          Greeting("Android")
-        }
+        NavGraph(startDestination = Screens.MainScreen.route, navController = rememberNavController())
       }
     }
   }
